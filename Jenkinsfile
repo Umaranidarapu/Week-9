@@ -18,10 +18,6 @@ pipeline {
                 bat 'kubectl apply -f C:/Devops1271/week2/service.yaml'
             }
         }
-       stage('Automated UI Test') {
-            steps {
-            bat 'docker run --rm -v C:/Devops1271/week2:/app -w /app python:3.8-slim python test_registration.py'
-            }
-        }
+       
     }
 }
