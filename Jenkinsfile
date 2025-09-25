@@ -14,13 +14,13 @@ pipeline {
         }
         stage('Deploy to Kubernetes') {
             steps {
-                bat 'kubectl apply -f C:/Users/sadhv/OneDrive/Desktop/DevOps1271/Week-2/deployment.yaml'
-                bat 'kubectl apply -f C:/Users/sadhv/OneDrive/Desktop/DevOps1271/Week-2/service.yaml'
+                bat 'kubectl apply -f C:/Devops1271/week2/deployment.yaml'
+                bat 'kubectl apply -f C:/Devops1271/week2/service.yaml'
             }
         }
         stage('Automated UI Test') {
             steps {
-                bat 'python C:/Users/sadhv/OneDrive/Desktop/DevOps1271/Week-2/test_registration.py'
+                bat 'python C:/Devops1271/week2/test_registration.py'
             }
         }
     }
